@@ -101,3 +101,121 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+#llenar las tablas 
+
+#USUARIOS
+INSERT INTO BLOG.usuarios (idusuarios, nombre, apellidos, correo_electronico, genero, fecha_nacimiento, password, contacto, usuarioscol)
+VALUES
+    (1, 'Juan', 'Pérez', 'juan@', 1, '1990-05-15', 123456, '1234567890', 'usuario1'),
+    (2, 'María', 'González', 'maria@', 2, '1992-08-20', 654321, '0987654321', 'usuario2'),
+    (3, 'Carlos', 'Rodríguez', 'carlos@', 1, '1985-03-10', '4584665', '9876543210', 'usuario3'),
+    (4, 'Laura', 'Martínez', 'laura@', 2, '1988-11-25', '984952', '5678901234', 'usuario4'),
+    (5, 'José', 'López', 'jose@', 1, '1979-07-05', '156455', '5432109876', 'usuario5'),
+    (6, 'Ana', 'Sánchez', 'ana@', 2, '1995-02-14', '135792', '2345678901', 'usuario6'),
+    (7, 'Pedro', 'Hernández', 'pedro@', 1, '1983-09-30', '98798', '6789012345', 'usuario7'),
+    (8, 'Marta', 'Díaz', 'marta@', 2, '1993-06-20', '987654', '7890123456', 'usuario8'),
+    (9, 'Alejandro', 'García', 'alejandro@', 1, '1980-04-12', '246810', '3456789012', 'usuario9'),
+    (10, 'Lucía', 'Fernández', 'lucia@', 2, '1991-01-08', '369258', '9012345678', 'usuario10'),
+    (11, 'Pablo', 'Muñoz', 'pablo@', 1, '1975-12-03', '987654321', '0123456789', 'usuario11'),
+    (12, 'Teresa', 'Ruiz', 'teresa@', 2, '1987-10-18', '123123', '5432101234', 'usuario12'),
+    (13, 'Jorge', 'Pérez', 'jorge@', 1, '1986-08-27', '456789', '6789012345', 'usuario13'),
+    (14, 'Cristina', 'Navarro', 'cristina@', 2, '1994-05-22', '789456', '8901234567', 'usuario14'),
+    (15, 'David', 'López', 'david@', 1, '1982-03-15', '147258', '9012345678', 'usuario15');
+
+#PUBLICACIONES 
+INSERT INTO BLOG.publicaciones (idpublicaciones, fecha, tipo_publicacion, contenido, idusuarios)
+VALUES
+    (1, '2024-04-17', 'Noticia', 'Contenido 1', 1),
+    (2, '2024-04-18', 'Artículo', 'Contenido 2', 2),
+    (3, '2024-04-19', 'Noticia', 'Contenido  3', 3),
+    (4, '2024-04-20', 'Artículo', 'Contenido 4', 4),
+    (5, '2024-04-21', 'Noticia', 'Contenido 5', 5),
+    (6, '2024-04-22', 'Artículo', 'Contenido 6', 6),
+    (7, '2024-04-23', 'Noticia', 'Contenido 7', 7),
+    (8, '2024-04-24', 'Artículo', 'Contenido 8', 8),
+    (9, '2024-04-25', 'Noticia', 'Contenido 9', 9),
+    (10, '2024-04-26', 'Artículo', 'Contenido 10', 10),
+    (11, '2024-04-27', 'Noticia', 'Contenido 11', 11),
+    (12, '2024-04-28', 'Artículo', 'Contenido 12', 12),
+    (13, '2024-04-29', 'Noticia', 'Contenido 13', 13),
+    (14, '2024-04-30', 'Artículo', 'Contenido 14', 14),
+    (15, '2024-05-01', 'Noticia', 'Contenido 5', 15),
+    (16, '2024-05-02', 'Artículo', 'Contenido 16', 1),
+    (17, '2024-05-03', 'Noticia', 'Contenido 17', 2),
+    (18, '2024-05-04', 'Artículo', 'Contenido 18', 3),
+    (19, '2024-05-05', 'Noticia', 'Contenido 19', 4),
+    (20, '2024-05-06', 'Artículo', 'Contenido  20', 5),
+    (21, '2024-05-07', 'Noticia', 'ContenidO 21', 6),
+    (22, '2024-05-08', 'Artículo', 'Contenido 22', 7),
+    (23, '2024-05-09', 'Noticia', 'Contenido 23', 8),
+    (24, '2024-05-10', 'Artículo', 'Contenido 24', 9),
+    (25, '2024-05-11', 'Noticia', 'Contenido 25', 10),
+    (26, '2024-05-12', 'Artículo', 'Contenido 26', 11),
+    (27, '2024-05-13', 'Noticia', 'Contenido 27', 12),
+    (28, '2024-05-14', 'Artículo', 'Contenido 28', 13),
+    (29, '2024-05-15', 'Noticia', 'Contenido 29', 14),
+    (30, '2024-05-16', 'Artículo', 'Contenido 30', 15);
+
+#CATEGORIAS
+ 
+INSERT INTO BLOG.categorias (idcategorias, nombre, id_principal, tipo, idpublicaciones)
+VALUES
+    (1, 'Tecnologia', 1, 1, 1),
+    (2, 'Deportes', 1, 2, 2),
+    (3, 'Salud', 1, 3, 3),
+    (4, 'Moda', 1, 4, 4),
+    (5, 'Entretenimiento', 1, 5, 5),
+    (6, 'Viajes', 1, 6, 6),
+    (7, 'Futbol', 2, 1, 7),
+    (8, 'Negocios', 1, 8, 8),
+    (9, 'Educación', 1, 9, 9),
+    (10, 'Arte', 1, 10, 10),
+    (11, 'Ciencia', 1, 11, 11),
+    (12, 'Historia', 1, 12, 12),
+    (13, 'Peliculas', 1, 13, 13),
+    (14, 'Literatura', 1, 14, 14),
+    (15, 'Animales', 1, 15, 15);
+
+#CONSULTAS
+#1
+INSERT INTO BLOG.comentarios (contenido, fecha, usuarios_idusuarios, idpublicaciones)
+SELECT 'Comentario de ejemplo', CURDATE(), 1, 1
+FROM BLOG.publicaciones
+LIMIT 10;
+
+#2
+SELECT p.*
+FROM BLOG.publicaciones p
+INNER JOIN BLOG.categorias c ON p.idpublicaciones = c.idpublicaciones
+WHERE c.idcategorias IN (10, 4) ;
+
+
+#3
+SELECT *
+FROM BLOG.publicaciones
+WHERE idusuarios IN (8, 10, 12);
+
+#4
+SELECT *
+FROM BLOG.publicaciones p
+INNER JOIN BLOG.usuarios u ON p.idusuarios = u.idusuarios;
+
+#5
+SELECT *
+FROM BLOG.publicaciones p
+LEFT JOIN BLOG.usuarios u ON p.idusuarios = u.idusuarios;
+
+#6
+SELECT *
+FROM BLOG.publicaciones p
+RIGHT JOIN BLOG.usuarios u ON p.idusuarios = u.idusuarios;
+
+#7
+UPDATE BLOG.publicaciones
+SET titulo = 'Nuevo título', contenido = 'Nuevo contenido'
+WHERE idpublicaciones IN (1, 2, 3, 4, 5)
+LIMIT 5;
+
+
+
+
