@@ -1,0 +1,71 @@
+Modelo de base de datos para un blog. pagina de publicaciones, noticias indormaticas
+opiniones
+desarrollar un tema.
+
+tabla Usuarios
+id
+nombre
+apellidos
+correo_electronico
+genero
+fecha_nac
+usuario
+password
+contacto
+created_at (fecha y hora) timestamps
+update_at 
+deleted_at softdelete null |fecha y hora de eliminacion
+
+tabla publicaciones
+id
+fecha
+titulo_publicacion
+descripcion/contenido
+id_usuario (llave foranea)
+categoria
+created_at
+updated_at
+
+tabla categorias 
+id 
+nombre
+id_principal null
+
+tipo (0= categoria principal, 1= sub  categoria)
+created_at
+update_at
+
+
+tabla comentarios 
+id
+comentario 
+id_usuario 
+id_publicacion
+fecha
+created_at
+updated_at
+
+ingresar 15 usuarios
+ingresar 30 publicaciones 
+ingresar 15 categorias
+ingresen N (N>5) cantidad de comentarios
+
+
+select a las publicaciones de 2 subjategorias
+
+select todas las publicaciones del usuario con el id 8, 10, 12
+select con inner join entre publicaciones y usuarios 
+select con left join entre publicaciones y usuarios 
+select con right join entre publicaciones y usuarios 
+
+select con inner join entre publicaciones y comentarios
+select con left join entre publicaciones y comentarios
+select con right join entre publicaciones y comentarios
+
+script de udate por lo menos a 5 publicaciones, ya sea actualice titulo o contenido/descripcion 
+
+
+
+
+
+
